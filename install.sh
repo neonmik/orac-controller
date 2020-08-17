@@ -12,6 +12,6 @@ pip3 install python-rtmidi python-osc
 install -v -m 644 $BASE_PATH/orac-bonnet-bridge/99-orac-bonnet-bridge.rules /etc/udev/rules.d/
 install -v -m 644 $BASE_PATH/orac-bonnet-bridge/orac-bonnet-bridge.service /usr/lib/systemd/system/
 install -v -m 755 $BASE_PATH/orac-bonnet-bridge/OracBonnetBridge.py /usr/local/bin/
-install -v -m 755 $BASE_PATH/orac-bonnet-bridge/pixel_arial_11.tff /usr/local/bin/
+install -v -m 755 $BASE_PATH/orac-bonnet-bridge/pixel_arial_11.ttf /usr/local/bin/
 systemctl daemon-reload
 udevadm control --reload
