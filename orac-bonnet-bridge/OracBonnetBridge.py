@@ -121,7 +121,7 @@ class Menu:
         
         # Draw the Title option
         self.draw.rectangle([0, 0, 127, 11], outline=1, fill=0)
-        self.draw.text((3, 1), "I: : : : : : : : : : O: : : : : : : : : : ", font=self.font, fill=1)
+        self.draw.text((3, 1), "           O   R   A   C ", font=self.font, fill=1)
         
         # Draw the Menu options
         top = 11
