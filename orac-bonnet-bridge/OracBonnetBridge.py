@@ -120,8 +120,6 @@ class Menu:
             end = start + self.rowCount
         
         # Draw the Title option
-        titleImage = Image.open(os.path.dirname(__file__) + '/images/oractitle.ppm').convert('1')
-            
         self.draw.rectangle([0, 0, 127, 11], outline=1, fill=0)
         self.draw.text((3, 1), "I: : : : : : : : : : O: : : : : : : : : : ", font=self.font, fill=1)
         
@@ -135,12 +133,6 @@ class Menu:
                 fill = 0
             self.draw.text((3, top + 1), self.options[x], font=self.font, fill=fill)
             top += 10
-            
-    def loading(self):
-        self.blank(True)
-        splashImage = Image.open(os.path.dirname(__file__) + '/images/oracsplash.ppm').convert('1')
-        elf.oled.image(self.splashImage)
-        self.oled.show()
         
     def end(self):
         self.blank(True)
@@ -681,7 +673,7 @@ GPIO.add_event_detect(5, GPIO.FALLING, callback=oracCtl.inputCallback, bouncetim
 
 
 try:
-    menu.loading()
+    
     print("Server Starting")
 
     
