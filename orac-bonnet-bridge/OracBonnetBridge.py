@@ -68,6 +68,7 @@ class Menu:
         self.oled = adafruit_ssd1306.SSD1306_I2C(128, 64, i2c)
 
         self.image = Image.new('1', (self.oled.width, self.oled.height))
+        
         self.draw = ImageDraw.Draw(self.image)
         self.font = ImageFont.truetype(os.path.dirname(__file__) + '/pixel_arial_11.ttf', 8)
 
@@ -77,7 +78,6 @@ class Menu:
     def set_options(self, options=[]):
         self.options = options
         self.rowCount = len(options)
-
 
     def set_highlight(self, highlight):
         if highlight is None:
@@ -102,6 +102,7 @@ class Menu:
             self.renderThread.start()
 
     def __run(self):
+        
         self.blank()
         self.__build()
         self.oled.image(self.image)
@@ -118,7 +119,9 @@ class Menu:
             start = self.highlightOption
             end = start + self.rowCount
         
-        # Draw the Title options
+        # Draw the Title option
+        titleImage = Image.open(os.path.dirname(__file__) + '/images/oractitle.ppm').convert('1')
+            
         self.draw.rectangle([0, 0, 127, 11], outline=1, fill=0)
         self.draw.text((3, 1), "I: : : : : : : : : : O: : : : : : : : : : ", font=self.font, fill=1)
         
@@ -133,6 +136,12 @@ class Menu:
             self.draw.text((3, top + 1), self.options[x], font=self.font, fill=fill)
             top += 10
             
+    def loading(self):
+        self.blank(True)
+        splashImage = Image.open(os.path.dirname(__file__) + '/images/oracsplash.ppm').convert('1')
+        elf.oled.image(self.splashImage)
+        self.oled.show()
+        
     def end(self):
         self.blank(True)
         self.oled.image(self.image)
@@ -672,6 +681,7 @@ GPIO.add_event_detect(5, GPIO.FALLING, callback=oracCtl.inputCallback, bouncetim
 
 
 try:
+    menu.loading()
     print("Server Starting")
 
     
