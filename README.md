@@ -25,9 +25,18 @@ sudo ./install.sh
 sudo halt
 ```
 
-Connect the Adafruit OLED Bonnet to your Raspberry Pi and power back on, it should automatically connect to Orac and display the UI.
+Connect the Adafruit OLED Bonnet to your Raspberry Pi and power back on, and us the following code to connect to Orac and display the UI:
 
-If it doesn't, make sure Orac and MEC are running.
+```
+sudo service orac-bonnet-bridge start
+```
+
+If you would like to have it start on boot, simple use:
+
+```
+sudo systemctl enable orac-bonnet-bridge.service
+```
+
 
 **Note**: the Adafruit bonnet will only work if you **disable** the pisound button functions. You can do this in patchbox from the commandline, or via ssh.
 
