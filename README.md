@@ -6,8 +6,8 @@ On the menu screen:
 
 * Up and Down - move between the lines.
 * Left and Right - move between the modules.
-* A - activate the selected item.
-* B - go to the parameters screen.
+* A (#6) - activate the selected item.
+* B (#5)- go to the parameters screen.
 
 On the parameters screen:
 
