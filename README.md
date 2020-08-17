@@ -50,3 +50,9 @@ On the parameters screen:
     * Otherwise go to previous or next parameter page.
 * A - activate the currently selected parameter for changing the value. 
 * B goes to the menu screen.
+
+## Notes and Caveats
+
+* This impletentaion is still a little laggy.
+* I've only tested this on a Raspberry PI 3B+ and an Adafruit OLED Bonnet. I'm sure it will work with other OLED's running I2C (address 0x3C) and any old tact switches. See pinout [here](https://pinout.xyz/pinout/oled_bonnet).
+* I've not managed to implement Midi on the params yet. 
