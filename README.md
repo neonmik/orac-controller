@@ -54,5 +54,5 @@ On the parameters screen:
 ## Notes and Caveats
 
 * This impletentaion is still a little laggy.
-* I've only tested this on a Raspberry PI 3B+ and an Adafruit OLED Bonnet. I'm sure it will work with other OLED's running I2C (address 0x3C) and any old tact switches. See pinout [here](https://pinout.xyz/pinout/oled_bonnet).
+* I've only tested this on a Raspberry PI 3B+ and an Adafruit OLED Bonnet, although I'm sure it will work with other OLED's running I2C (address 0x3C) and any old tact switches. See pinout [here](https://pinout.xyz/pinout/oled_bonnet).
 * I've not managed to implement Midi on the params yet. 
