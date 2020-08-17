@@ -1,9 +1,0 @@
-[Unit]
-Description=Orac <-> Midiboy bridge daemon.
-After=mec.service
-
-[Service]
-ExecStart=/usr/local/bin/OracCtlBridge.py
-
-[Install]
-WantedBy=multi-user.target
