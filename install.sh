@@ -14,5 +14,7 @@ install -v -m 644 $BASE_PATH/orac-bonnet-bridge/99-orac-bonnet-bridge.rules /etc
 install -v -m 644 $BASE_PATH/orac-bonnet-bridge/orac-bonnet-bridge.service /usr/lib/systemd/system/
 install -v -m 755 $BASE_PATH/orac-bonnet-bridge/OracBonnetBridge.py /usr/local/bin/
 install -v -m 755 $BASE_PATH/orac-bonnet-bridge/pixel_arial_11.ttf /usr/local/bin/
+install -v -m 755 $BASE_PATH/orac-bonnet-bridge/images/oracsplash /usr/local/bin/images/
+install -v -m 755 $BASE_PATH/orac-bonnet-bridge/images/oractitle /usr/local/bin/images/
 systemctl daemon-reload
 udevadm control --reload
