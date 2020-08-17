@@ -9,10 +9,8 @@ From the command line or Terminal window start by running the following command 
 sudo raspi-config
 ```
 
-Highlight the “I2C” option and activate “<Select>”.
-Select and activate “<Yes>”
-Highlight and activate “<Ok>”
-   
+Highlight the “I2C” option and activate, follow the instructions through and reboot your Raspberry Pi.
+
 
 Install OracBonnetBridge.py on your Raspberry Pi:
 
