@@ -1,2 +1,0 @@
-ACTION=="add", SUBSYSTEM=="sound", ENV{ID_MODEL}=="ORACBONNETBRIDGE", RUN+="/bin/systemctl start orac-bonnet-bridge"
-ACTION=="remove", SUBSYSTEM=="sound", ENV{ID_MODEL}=="ORACBONNETBRIDGE", RUN+="/bin/systemctl stop orac-bonnet-bridge"
