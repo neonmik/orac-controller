@@ -1,6 +1,6 @@
 # Adafruit OLED Bonnet &lt;-> Orac UI
 
-## Sketch and Bridge Install
+## I2C and Bridge Install
 
 
 Firstly, if you haven't already you need to activate the I2C interface on your Raspberry Pi.
