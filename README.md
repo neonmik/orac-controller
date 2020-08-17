@@ -1,5 +1,24 @@
 # Adafruit OLED Bonnet &lt;-> Orac UI
 
+## Sketch and Bridge Install
+
+Install OracBonnetBridge.py on your Raspberry Pi:
+
+```
+git clone https://github.com/neonmik/orac-controller
+cd orac-controller
+sudo ./install.sh
+sudo halt
+```
+
+Connect the Adafruit OLED Bonnet to your Raspberry Pi and power back on, it should automatically connect to Orac and display the UI.
+
+If it doesn't, make sure Orac and MEC are running.
+
+**Note**: the Adafruit bonnet will only work if you **disable** the pisound button functions. You can do this in patchbox from the commandline, or via ssh.
+
+I don't have a pisound, so I'm not sure on the compatability, but I'm aware one of the buttons on this controller fires the pisound button funtions.
+
 ## Controls
 
 On the menu screen:
