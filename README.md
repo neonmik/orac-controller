@@ -3,6 +3,8 @@
 ## Sketch and Bridge Install
 
 
+Firstly, if you haven't already you need to activate the I2C interface on your Raspberry Pi.
+
 From the command line or Terminal window start by running the following command :
 
 ```
@@ -12,7 +14,9 @@ sudo raspi-config
 Highlight the “I2C” option and activate, follow the instructions through and reboot your Raspberry Pi.
 
 
-Install OracBonnetBridge.py on your Raspberry Pi:
+
+
+Now, install OracBonnetBridge.py on your Raspberry Pi:
 
 ```
 git clone https://github.com/neonmik/orac-controller
