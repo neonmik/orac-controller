@@ -672,12 +672,15 @@ GPIO.add_event_detect(5, GPIO.FALLING, callback=oracCtl.inputCallback, bouncetim
 
 
 try:
+    print("Server Starting")
 
-    orac.run()
-    menu.run()
+    
+    while True:
+        orac.run()
+        menu.run()
+
 
 finally:
-
     menu.end()
     orac.end()
     del ctrl
@@ -685,4 +688,4 @@ finally:
     del orac
     GPIO.cleanup()
     print("Cleaned up and done!")
-
+    raise SystemExit
