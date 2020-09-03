@@ -388,9 +388,9 @@ class OracCtl:
 
     def __init__(self, menu, Controller):
         self.blank = menu.blank
-        self.paramList = ["", "", "", ""]
-        self.printList = ["", "", "", "", ""]
-        self.highlightList = ["", "", "", "", ""]
+        self.paramList = ["" for _ in range(Orac.MAX_PARAMS)]
+        self.printList = [""]*Orac.MAX_LINES
+        self.highlightList = [""]*Orac.MAX_LINES
                 
         GPIO.setup(17, GPIO.IN, pull_up_down=GPIO.PUD_UP)
         GPIO.setup(22, GPIO.IN, pull_up_down=GPIO.PUD_UP)
@@ -424,10 +424,10 @@ class OracCtl:
         if inverted is True:
             self.highlightDefine = int(line)
             menu.set_highlight(self.highlightDefine)
-        
+
         if line < 5:
             self.printList[line] = (text)
-        if line >= 5:
+        elif line >= 5:
             print(text)
         
         menu.set_options(self.printList)
